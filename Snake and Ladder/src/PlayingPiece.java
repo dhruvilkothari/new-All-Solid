@@ -1,0 +1,11 @@
+public abstract class PlayingPiece {
+    public final PieceType pieceType;
+
+    public PlayingPiece(PieceType pieceType){
+        this.pieceType =  pieceType;
+    }
+
+    public PieceType getPieceType() {
+        return pieceType;
+    }
+}
