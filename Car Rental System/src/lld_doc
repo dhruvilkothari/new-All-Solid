@@ -1,0 +1,5 @@
+Car Rental System
+
+Warehouse  {
+    vehicle : Vehicle
+}
