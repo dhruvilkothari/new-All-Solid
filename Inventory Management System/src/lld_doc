@@ -1,0 +1,29 @@
+Inventory Management System
+
+List of warehouses
+
+Inventory {
+    instance: Inventory,
+    warehouse: List,
+
+}
+
+warehouse {
+    id: str,
+    product: list,
+    replishmnetStrategy: Replishment
+}
+
+product {
+    id: str
+    name: str,
+    quantity: int,
+    thresholdQuantity: int,
+    price: int
+    category: ProductCategory
+}
+ProductCategory: Enum {
+
+}
+
+order for warehouse-> qunatity of product goesdown -->
