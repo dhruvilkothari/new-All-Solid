@@ -1,0 +1,27 @@
+entities.
+User,
+Vehicle,
+Parking Lot
+Ticket
+Exit
+Entrance
+Parking Floor
+Parking Spot (Electric, Compact , Big)
+Payment Processor
+
+Vehicle --> Entrance--> Ticket-->PaymentProcessor-->PaymentStrategy.
+
+
+
+Payment Spot {
+    int spotNumber,
+    Vehicle vehicle,
+    boolean isAvailable,
+    int price,
+}
+
+Ticket {
+    Parking Spot,
+    LocalDateTime
+
+}
