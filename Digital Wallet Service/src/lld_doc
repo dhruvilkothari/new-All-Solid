@@ -1,0 +1,50 @@
+User create --> Wallet Created Automatically
+
+User
+Wallet
+Transaction
+
+Digital Wallet Service {
+    userController: UserController,
+    walletController: WalletController
+    transactionStrategy: TransactionStrategy
+
+    +createUser()
+    +addMoney()
+    +payUserMoney(id1: int, id2: int ,amount:id)
+
+}
+
+UserController {
+    -users: List<User>
+    + createUser()
+    +updateUser();
+
+}
+
+WalletController {
+    wallets: List<Wallets>
+}
+
+
+User {
+    id: string,
+    name: string,
+    wallet: Wallet
+}
+
+
+Wallet {
+    id: string,
+    amount: int,
+    userId: string
+}
+
+Transaction {
+    id: string,
+    from: id,
+    to: id,
+    status: TransactionStatus
+}
+
+TransactionStatus {SUCCESS,FAILED, PENDING}
