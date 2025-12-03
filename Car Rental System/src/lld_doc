@@ -1,5 +1,51 @@
 Car Rental System
 
-Warehouse  {
-    vehicle : Vehicle
+User will go to car reservation system.
+choose location and he will get rental shops and he can choose vehicle on his preference date.
+In rental store person can show booking document and take vehicle.
+user can pay with card and upi
+price will be charged on scooty base price + multiple by some number to get his value.
+
+
+RentalSystem {
+    rentalStores: List<RentalStore>,
+    users: List<User>
+}
+
+
+RentalStore {
+    vehicle: List<Vehicle>,
+    reservations: HashMap<string, reservation>
+}
+
+Vehicle {
+    id: string,
+    name: string,
+    isAvailable: boolean,
+
+}
+
+User {
+id: string,
+name: string
+}
+Reservation {
+    id: string,
+    rentalStore: id,
+    vehicle: Vehicle,
+    user: User,
+    status: Enum("Confirmed", "Pending"),
+    startDate: Date,
+    endDate: Date,
+    price: int
+}
+
+PaymentStrategy {
+
+}
+
+UpiPaymentStrategy{
+}
+CardPaymentStrategy{
+
 }
